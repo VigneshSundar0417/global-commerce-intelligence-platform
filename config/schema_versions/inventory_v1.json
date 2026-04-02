@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "InventoryUpdate",
+  "version": 1,
+  "fields": [
+    {"name": "item_id", "type": "string"},
+    {"name": "warehouse_id", "type": "string"},
+    {"name": "change_type", "type": "string"},
+    {"name": "quantity_change", "type": "int"},
+    {"name": "new_quantity", "type": "int"},
+    {"name": "update_timestamp", "type": "string"}
+  ]
+}

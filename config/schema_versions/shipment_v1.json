@@ -1,0 +1,14 @@
+{
+  "type": "record",
+  "name": "ShipmentCreated",
+  "version": 1,
+  "fields": [
+    {"name": "shipment_id", "type": "string"},
+    {"name": "order_id", "type": "string"},
+    {"name": "customer_id", "type": "string"},
+    {"name": "carrier", "type": "string"},
+    {"name": "shipping_cost", "type": "double"},
+    {"name": "estimated_delivery_date", "type": "string"},
+    {"name": "shipment_timestamp", "type": "string"}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "type": "record",
+  "name": "CustomerEvent",
+  "version": 1,
+  "fields": [
+    {"name": "event_id", "type": "string"},
+    {"name": "customer_id", "type": "string"},
+    {"name": "event_type", "type": "string"},
+    {"name": "page", "type": "string"},
+    {"name": "device_type", "type": "string"},
+    {"name": "region", "type": "string"},
+    {"name": "event_timestamp", "type": "string"}
+  ]
+}

@@ -1,0 +1,22 @@
+from airflow import DAG
+from airflow.operators.bash import BashOperator
+from datetime import datetime
+
+SPARK_SUBMIT = (
+    "spark-submit "
+    "--packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0,"
+    "org.apache.hadoop:hadoop-aws:3.3.4,io.delta:delta-spark_2.12:3.2.0 "
+    "/home/vicky/global-commerce-intelligence-platform/spark/gold/gold_daily_rollup.py"
+)
+
+with DAG(
+    dag_id="gold_daily_rollup",
+    start_date=datetime(2024, 1, 1),
+    schedule_interval="@daily",
+    catchup=False,
+) as dag:
+
+    rollup = BashOperator(
+        task_id="gold_daily_rollup_task",
+        bash_command=SPARK_SUBMIT,
+    )
